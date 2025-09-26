@@ -4,15 +4,15 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
 from flask import Flask, send_from_directory
-from models.user import db, User
-from models.appointment import Appointment
-from models.prescription import Prescription
-from routes.user import user_bp
-from routes.appointment import appointment_bp
-from routes.prescription import prescription_bp
-from routes.auth import auth_bp
-from routes.templates import templates_bp
-from routes.pdf import pdf_bp
+from src.models.user import db, User
+from src.models.appointment import Appointment
+from src.models.prescription import Prescription
+from src.routes.user import user_bp
+from src.routes.appointment import appointment_bp
+from src.routes.prescription import prescription_bp
+from src.routes.auth import auth_bp
+from src.routes.templates import templates_bp
+from src.routes.pdf import pdf_bp
 
 app = Flask(__name__, static_folder=os.path.join(os.path.dirname(__file__), 'static'))
 app.config['SECRET_KEY'] = 'asdf#FGSgvasgf$5$WGT'
